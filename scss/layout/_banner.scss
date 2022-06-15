@@ -1,0 +1,64 @@
+@use '../abstracts/var' as *;
+.banner-container {
+     position: relative;
+     padding-top: $header-height;
+     padding-bottom: calc( 9 / 16 * 100% - $header-height);
+     margin: 0 -20px;
+     background-image: url('../../imgs/seattle-cityscape-blue-sky-night.jpg');
+     background-size: 105%;
+     background-position: center;
+     animation: 
+          slide-img 25s ease-in-out infinite;
+}
+@keyframes slide-img {
+     20% {
+          background-image: url('../../imgs/los-angles-synthwave-cityscape-art.jpg');
+          background-position: bottom;
+          background-size: 100%;
+     }
+     40% {
+          background-image: url('../../imgs/night-city-buildings-rays.jpg');
+          background-position: right;
+          background-size: 105%;
+     }
+     60% {
+          background-image: url('../../imgs/sidewalk-near-bridge-city-night.jpg');
+          background-position: top;
+          background-size: 100%;
+     }
+     80% {
+          background-image: url('../../imgs/toronto-cityscape-lights.jpg');
+          background-position: left;
+          background-size: 105%;
+     }
+     100% {
+          background-image: url('../../imgs/night-city-buildings-rays.jpg');
+          background-position: bottom;
+          background-size: 100%;
+     }
+}
+.banner {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     &__heading {
+          margin-bottom: clamp(7px, 2vw, 20px);
+          font-size: clamp(0px, 7vw, 40px);
+          color: white;
+          white-space: nowrap;
+     }
+     &__desc {
+          margin-bottom: clamp(10px, 2vw, 30px);
+          font-size: clamp(15px, 2.5vw, 20px);
+          color: white;
+          white-space: nowrap;
+     }
+     &__btn {
+          padding: 20px 50px;
+          cursor: pointer;
+     }
+}

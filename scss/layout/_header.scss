@@ -1,0 +1,38 @@
+@use '../abstracts/var' as *;
+.header {
+     position: fixed;
+     left: 0;
+     right: 0;
+     z-index: 1;
+}
+.header-container {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     height: $header-height;
+     max-width: calc(1270px + 40px);
+     padding: 20px;
+     border-bottom: 1px solid #ccc;
+     margin: 0 auto;
+     color: white;
+     transition: all 0.25s linear;
+}
+.mobile-bar {
+     display: none;
+}
+.nav {
+     flex: 0.7;
+     &__list {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+     }
+     &__item {
+          cursor: pointer;
+          a {
+               color: white;
+          }
+     }
+}
+.header-phone {}
+
